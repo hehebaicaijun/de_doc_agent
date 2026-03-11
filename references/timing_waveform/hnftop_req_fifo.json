@@ -1,0 +1,35 @@
+{signal: [
+        {name: 'clk'                     , wave: 'p......'},
+    ['Create Entry Logic',
+        {name: 'bki_can_crt'             , wave:'010....'},
+        {name: 'bki_req_vld'             , wave:'010....'},
+        {name: 'bki_crt_bus'             , wave:'x3x....', data:'Flit0'},
+        {name: 'fifo_can_crt'            , wave:'0.10...'},
+        {name: 'fifo_req_vld'            , wave:'0.10...'},
+        {name: 'xr1_can_crt'            , wave:'0..10..'},
+        {name: 'xr1_req_vld'            , wave:'0..10..'},
+        {name: 'xr1_crt_bus'            , wave:'x..5x..', data:'Flit2'},
+    ],
+    {},
+    ['REQ FIFO',
+        {name: 'hnf_req_fifo_pop_vld'    , wave:'1..0...'},
+        
+        {name: 'hnf_req_fifo_pop_en'     , wave:'0.10...'},
+        {name: 'hnf_req_fifo_pop_bus'    , wave:'x..4x..', data:'Flit1'},
+    ],
+    {},
+    ['Create Interface',
+        {name: 'hnf_req_ce_crt_bus_en'   , wave:'01010..'},
+        {name: 'hnf_req_ce_crt_bus'      , wave:'x3x5x..', data:'Flit0 Flit2'},
+        {name: 'hnf_req_ce_crt_sel_en'   , wave:'01..0..'},
+        {name: 'hnf_req_ce_crt_sel'      , wave:'x345x..', data:'Sel0 Sel1 Sel2'},
+
+        /*{name: 'bki_req_vld_r0'          , wave:'0.10...'},*/
+        {name: 'fifo_req_vld_r0'         , wave:'0..10..'},
+        {name: 'hnf_req_ce_bus'          , wave:'x.3.5x.', data:'Flit0 Flit2'},
+        {name: 'hnf_req_ce_sel'          , wave:'x.345x.', data:'Sel0 Sel1 Sel2'},
+        {},
+        {name: 'hnf_crt_bus'             , wave:'x.345x.', data:'Flit0 Flit1 Flit2'},
+        {name: 'hnf_crt_sel'             , wave:'x.345x.', data:'Sel0 Sel1 Sel2'},
+    ]
+]}
